@@ -1,28 +1,17 @@
-import com.codeborne.selenide.CollectionCondition;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.*;
-
-
-import java.util.List;
-import java.util.stream.Stream;
-
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Condition.*;
-import static org.junit.jupiter.api.Assertions.*;
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.*;
 
 import java.util.List;
 import java.util.stream.Stream;
+import static java.util.Arrays.asList;
 
+import com.codeborne.selenide.CollectionCondition;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
-import static java.util.Arrays.asList;
+import static com.codeborne.selenide.Selenide.*;
+
 public class ParamTest {
 
     @ParameterizedTest(name = "При поиске слова - {0} отображаются статьи про {0}")
